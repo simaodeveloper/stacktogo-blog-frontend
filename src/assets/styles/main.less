@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+@import 'vendor/_normalize';
+@import 'vendor/_bootstrap';
+
+@import 'vendor/_slick';
+@import 'vendor/_slick-theme';
+
+@import '_variables';
+@import '_reset';
+@import '_fonts';
+@import '_mixins';
+@import '_objects';
+
+@import (less, optional) '../../.tmp/jpg-sprite.css';
+@import (less, optional) '../../.tmp/png-sprite.css';
+
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    @import (less, optional) '../../.tmp/jpg-sprite@2x.css';
+    @import (less, optional) '../../.tmp/png-sprite@2x.css';
+}
+
+a[href="#goToContent"] {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    bottom: 0;
+    padding: 0;
+    outline: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+// Type your css for pages here
