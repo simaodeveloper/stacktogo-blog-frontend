@@ -1,0 +1,120 @@
+/**
+ * You are inside the CSS selector of your component
+ *
+ * Try to add CSS properties direct below, eg:
+ * background-color: red;
+ */
+
+& {
+    .fit-w-4;
+    min-height: 30vw;
+
+    .card__link {
+        height: 100%;
+        position: relative;
+        display: block;
+        padding: 18px 18px 25% 18px;
+        box-sizing: border-box;
+    }
+
+    .card__figure {
+        overflow: hidden;
+    }
+
+    .card__image {
+        display: block;
+        width: 100%;
+        transition: transform .6s ease;
+    }
+    
+    .card__title {
+        margin-top: 21px;
+        font-family: @font-featured;
+        font-size: responsive 18px 28px;
+        font-range: 1024px 1400px;
+        line-height: 1.2em;
+    }
+
+    .card__description {
+        margin-top: 9px;
+        font-size: responsive 14px 18px;
+        font-range: 1024px 1400px;
+        line-height: 1.6em;
+        letter-spacing: -0.1px;
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 18px;
+        left: 18px;
+    }
+
+    // Modifiers
+    &.card--feature {
+        
+        .card__link {
+            background: @color-3;
+        }
+
+        .arrow {
+            .arrow--right;
+            right: 18px;
+            bottom: 20px;
+            left: auto;
+        }
+    }
+
+    &.card--double {
+        .fit-w-8;
+
+        .card__link {
+            padding-bottom: 16%;
+        }
+
+        .card__figure {
+            max-height: 20vw;
+            display: block;
+        }
+    }
+
+    &.card--full {
+        .fit-w-12;
+        min-height: auto;
+
+        .card__link {
+            display: flex;
+            padding: 18px;
+        }
+
+        .card__figure {
+            max-width: 592px;
+        }
+
+        .card__content {
+            .fit-w-6;
+            padding-left: 4vw;
+        }
+
+        .card__title {
+            font-size: responsive 18px 34px;
+        }
+
+        .card__description {
+            font-size: responsive 14px 22px;
+        }
+    }
+}
+
+.desktop & {
+
+    &:hover {
+
+        .card__image {
+            transform: scale(1.2);
+        }
+
+        .card__title {
+            text-decoration: underline;
+        }
+    }
+}
