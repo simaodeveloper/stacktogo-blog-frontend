@@ -1,0 +1,31 @@
+@iterations: 12;
+@column: 100% / @iterations;
+
+.fit-loop (@i) when (@i > 0) {
+    .fit-w-@{i} {
+        width: calc(~"(@{i} * @{column})");
+    }
+    .fit-loop(@i - 1);
+}
+.fit-loop (@iterations);
+
+.fit-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    overflow: hidden;
+}
+
+.fit-justify-center {
+    justify-content: center;
+}
+
+.fit-align-center {
+    align-items: center;
+}
+
+[class*="fit-w"] {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
