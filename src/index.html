@@ -1,7 +1,22 @@
 {% extends ".templates/_base.html" %}
 
 {% block content %}
-<main id="goToContent">
-{{ test | dump }}
-</main>
+    <main id="goToContent">
+        <div class="container">
+            <div class="fit-grid">
+                {% for index in range (1, 10) %}
+                    {% if loop.index == 1 %}
+                        {% component 'card', data={ index: index }, tag="article.card.card--feature.card--full" %}
+                    {% elseif loop.index == 2 %}
+                        {% component 'card', data={ index: index }, tag="article.card.card--double" %}
+                    {% elseif loop.index == 3 %}
+                        {% component 'card', data={ index: index }, tag="article.card.card--feature" %}
+                    {% else  %}
+                        {% component 'card', data={ index: index }, tag="article.card" %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% component 'pagination' %}
+        </div>
+    </main>
 {% endblock %}
