@@ -5,6 +5,7 @@ node_modules
 # build
 _AUX/*
 !.gitkeep
+build/*
 
 **/*.map
 
