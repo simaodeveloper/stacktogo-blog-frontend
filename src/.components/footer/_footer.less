@@ -4,3 +4,65 @@
  * Try to add CSS properties direct below, eg:
  * background-color: red;
  */
+
+& {
+    font-size: 16px;
+    color: @color-2;
+
+    #footer {
+        border-top: 1px solid @color-3;
+        padding: 52px 0;
+    }
+
+    .container {
+        overflow: hidden;
+    }
+
+    .copyright {
+        display: block;
+        text-align: center;
+    }
+
+    .network {
+        float: right;
+        display: flex;
+        align-items: center;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .network__item {
+        margin: 0 25px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .network__link {
+        display: block;
+    }
+
+    .network__link--linkedin {
+        width: 19px;
+        height: 20px;
+    }
+
+    .network__link--facebook {
+        width: 10px;
+        height: 19px;
+    }
+
+    .network__link--twitter {
+        width: 20px;
+        height: 16px;
+    }
+}
