@@ -79,18 +79,18 @@
         </div>
     </div>
 
-    <a href="#goToContent" tabindex="1">Ir para o conteúdo</a>
+    <a href="#goToContent" tabindex="0">Ir para o conteúdo</a>
 
     {% block header %}
-        {% component "header", tag="header" %}
+        {% component "header" %}
     {% endblock %}
 
     {% block content %}
-    <main></main>
+        <main></main>
     {% endblock %}
 
     {% block footer %}
-        {% component "footer", tag="footer" %}
+        {% component "footer" %}
     {% endblock %}
 
     <noscript id="deferred-styles">
