@@ -1,16 +1,13 @@
 @charset 'utf-8';
 
 @import 'vendor/_normalize';
-@import 'vendor/_bootstrap';
-
-@import 'vendor/_slick';
-@import 'vendor/_slick-theme';
 
 @import '_variables';
 @import '_reset';
 @import '_fonts';
 @import '_mixins';
 @import '_objects';
+@import '_grid';
 
 @import (less, optional) '../../.tmp/jpg-sprite.css';
 @import (less, optional) '../../.tmp/png-sprite.css';
@@ -18,6 +15,14 @@
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
     @import (less, optional) '../../.tmp/jpg-sprite@2x.css';
     @import (less, optional) '../../.tmp/png-sprite@2x.css';
+}
+
+body {
+    font-family: @font-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @font-featured;
 }
 
 a[href="#goToContent"] {
@@ -35,3 +40,17 @@ a[href="#goToContent"] {
 }
 
 // Type your css for pages here
+
+html {
+    font-size: responsive 8px 10px;
+}
+
+main {
+    padding-bottom: 140px;
+
+    .card {
+        margin-bottom: 3%;
+    }
+}
+
+
