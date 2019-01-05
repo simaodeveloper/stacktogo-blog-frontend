@@ -5,8 +5,14 @@
  * @param {Object} params - Params to be used
  */
 
+const $image = $('.card__image', el);
+const bigImagePath = $image.attr('data-big-image');
 
-const $el = $(el);
-const $title = $el.find('.card__title');
+const $bigImage = $('<img />');
 
-console.log($title.text().match(/\n/g));
+$bigImage.on('load', () => {
+    $image.attr('src', $bigImage.attr('src'));
+    $image.removeClass('card__image--blur');
+});
+
+$bigImage.attr('src', bigImagePath);
