@@ -20,6 +20,7 @@
 
     .fit-grid {
         .fit-align-center;
+        overflow: initial;
     }
 
     .block {
@@ -96,6 +97,17 @@
         .network {
             margin: 15px 0;
             float: none;
+        }
+    }
+
+    .desktop & {
+
+        .network__link {
+            transition: transform .25s ease-out;
+
+            &:hover {
+                transform: scale(1.5);
+            }
         }
     }
 }
