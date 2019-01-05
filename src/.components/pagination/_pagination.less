@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
+    font-size: responsive 24px 48px;
 
     .arrow--left {
         margin-right: 52px;
@@ -17,5 +17,27 @@
 
     .arrow--right {
         margin-left: 52px;
+    }
+
+    @media (max-width: 1024px) {
+        .arrow {
+            transform: scale(0.7);
+        }
+
+        .arrow--left {
+            transform-origin: right;
+            margin-right: 26px;
+        }
+
+        .arrow--right {
+            transform-origin: left;
+            margin-left: 26px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .arrow {
+            transform: scale(0.5);
+        }
     }
 }
