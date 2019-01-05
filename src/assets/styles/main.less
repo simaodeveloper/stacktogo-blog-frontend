@@ -5,6 +5,7 @@
 @import '_variables';
 @import '_reset';
 @import '_fonts';
+@import '_animations';
 @import '_mixins';
 @import '_objects';
 @import '_grid';
@@ -37,6 +38,18 @@ a[href="#goToContent"] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+}
+
+[data-ani-type] {
+   visibility: hidden;
+
+   &[data-animated="true"] {
+       visibility: visible;
+   }
+
+   .mobile & {
+       visibility: visible;
+   }
 }
 
 // Type your css for pages here
