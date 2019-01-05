@@ -19,6 +19,14 @@
         margin-left: 52px;
     }
 
+    .disabled {
+        pointer-events: none;
+
+        .arrow {
+            opacity: .2;
+        }
+    }
+
     @media (max-width: 1024px) {
         .arrow {
             transform: scale(0.7);
@@ -38,6 +46,17 @@
     @media (max-width: 767px) {
         .arrow {
             transform: scale(0.5);
+        }
+    }
+
+    .desktop & {
+
+        .previous-page:hover {
+            animation: bounce-left 1s ease-out infinite;
+        }
+
+        .next-page:hover {
+            animation: bounce-right 1s ease-out infinite;
         }
     }
 }
