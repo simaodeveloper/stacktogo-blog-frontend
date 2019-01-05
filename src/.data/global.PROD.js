@@ -2,11 +2,11 @@ module.exports = {
     base: '/',
     assets: './assets',
     
-    title: 'Boilerplate Luego',
-    description: '',
+    title: 'StackToGo - Blog',
+    description: 'A place to share IT knowledge',
     share: {
-        title: 'Boilerplate Luego',
-        description: '',
+        title: 'StackToGo - Blog',
+        description: 'A place to share IT knowledge',
         image: ''
     },
     traking: {
