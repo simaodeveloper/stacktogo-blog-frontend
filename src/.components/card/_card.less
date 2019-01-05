@@ -7,6 +7,7 @@
 
 & {
     .fit-w-4;
+    color: @color-2;
     min-height: 30vw;
 
     .card__link {
@@ -47,6 +48,23 @@
         position: absolute;
         bottom: 18px;
         left: 18px;
+
+        @media (max-width: 1024px) {
+            transform: scale(0.7);
+            transform-origin: bottom left;
+        }
+
+        @media (max-width: 1024px) {
+            transform: scale(0.5);
+        }
+    }
+
+    @media (max-width: 767px) {
+        .fit-w-6;
+    }
+
+    @media (max-width: 479px) {
+        .fit-w-12;
     }
 
     // Modifiers
@@ -61,6 +79,15 @@
             right: 18px;
             bottom: 20px;
             left: auto;
+
+            @media (max-width: 1024px) {
+                transform: scale(0.7);
+                transform-origin: bottom right;
+            }
+
+            @media (max-width: 1024px) {
+                transform: scale(0.5);
+            }
         }
     }
 
@@ -74,6 +101,18 @@
         .card__figure {
             max-height: 20vw;
             display: block;
+        }
+
+        @media (max-width: 767px) {
+            .fit-w-6;
+
+            .card__figure {
+                max-height: none;
+            }
+        }
+
+        @media (max-width: 479px) {
+            .fit-w-12;
         }
     }
 
@@ -101,6 +140,40 @@
 
         .card__description {
             font-size: responsive 14px 22px;
+            line-height: 1.4em;
+        }
+
+        @media (max-width: 768px) {
+            .card__figure {
+                max-width: 360px;
+            }
+
+            .card__title {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .fit-w-6;
+            min-height: 30vw;
+
+            .card__link {
+                display: block;
+                padding: 18px 18px 25% 18px;
+            }
+
+            .card__title {
+                margin-top: 21px;
+            }
+
+            .card__content {
+                width: auto;
+                padding-left: 0;
+            }
+        }
+        
+        @media (max-width: 479px) {
+            .fit-w-12;
         }
     }
 }
