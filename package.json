@@ -8,7 +8,8 @@
     "deploy": "gulp build --env=hom && git hadouken 'Deploy Homologation'",
     "prod": "gulp build --env=prod",
     "build": "gulp build",
-    "preinstall": "npm i -g gulp-cli"
+    "preinstall": "npm i -g gulp-cli",
+    "deploy:surge": "cd build && surge . && cd .."
   },
   "repository": {
     "type": "git",
