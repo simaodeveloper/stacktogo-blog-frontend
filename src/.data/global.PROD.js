@@ -1,13 +1,13 @@
 module.exports = {
     base: '/',
     assets: './assets',
-    
+
     title: 'StackToGo - Blog',
     description: 'A place to share IT knowledge',
     share: {
         title: 'StackToGo - Blog',
         description: 'A place to share IT knowledge',
-        image: ''
+        image: 'assets/images/share.jpg'
     },
     traking: {
         UA: 'UA-XXXXX-X',
