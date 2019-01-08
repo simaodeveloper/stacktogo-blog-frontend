@@ -34,45 +34,6 @@
 
     .network {
         float: right;
-        display: flex;
-        align-items: center;
-
-        svg {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .network__item {
-        margin: 0 25px;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    .network__link {
-        display: block;
-    }
-
-    .network__link--linkedin {
-        width: 20px;
-        height: 20px;
-    }
-
-    .network__link--facebook {
-        width: 11px;
-        height: 23px;
-    }
-
-    .network__link--twitter {
-        width: 20px;
-        height: 23px;
     }
 
     @media (max-width: 767px) {
@@ -97,17 +58,6 @@
         .network {
             margin: 15px 0;
             float: none;
-        }
-    }
-
-    .desktop & {
-
-        .network__link {
-            transition: transform .25s ease-out;
-
-            &:hover {
-                transform: scale(1.5);
-            }
         }
     }
 }
