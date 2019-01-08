@@ -1,0 +1,21 @@
+<section class="related">
+    <h1 class="related__title">
+        Leia a seguir
+
+        <div class="arrow">
+            <div class="arrow__content"></div>
+        </div>
+    </h1>
+
+    <div class="related__content">
+        <div class="fit-grid">
+            {% for index in range(0,3) %}
+                {% if loop.index == 1 %}
+                    {% component 'card', data={ index: index }, tag="article.card.card--feature" %}
+                {% else %}
+                    {% component 'card', data={ index: index }, tag="article.card" %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
