@@ -24,7 +24,7 @@
         window.open('https://twitter.com/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(descr), 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
     };
 
-    Share.linkedin = function linkedin(url, title, descr){
+    Share.linkedin = function linkedin(url, descr, title){
         var winWidth = 626;
         var winHeight = 436;
 
