@@ -69,6 +69,22 @@ $document.on('preloaded.before', function () {
 
     // Add your code here
 
+    const $images = $('[data-big-image]');
+
+    $images.each((index, image) => {
+        const $image = $(image);
+        const bigImagePath = $image.attr('data-big-image');
+
+        const $bigImage = $('<img />');
+
+        $bigImage.on('load', () => {
+            $image.attr('src', $bigImage.attr('src'));
+            $image.removeClass('blur');
+        });
+
+        $bigImage.attr('src', bigImagePath);
+    });
+
     $window.trigger('resize');
 });
 
