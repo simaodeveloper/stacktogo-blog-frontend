@@ -29,10 +29,6 @@
         transition: transform .6s ease;
     }
 
-    .card__image--blur {
-        filter: blur(50px);
-    }
-    
     .card__title {
         margin-top: 21px;
         font-family: @font-featured;
@@ -59,7 +55,7 @@
             transform-origin: bottom left;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1023px) {
             transform: scale(0.5);
         }
     }
@@ -74,7 +70,7 @@
 
     // Modifiers
     &.card--feature {
-        
+
         .card__link {
             background: @color-3;
         }
@@ -176,7 +172,7 @@
                 padding-left: 0;
             }
         }
-        
+
         @media (max-width: 479px) {
             .fit-w-12;
         }
@@ -196,7 +192,7 @@
         }
 
         &.card--feature {
-            
+
             .arrow {
                 animation: bounce-right 1s ease-out infinite;
             }
@@ -204,11 +200,11 @@
     }
 
     &.card--feature {
-            
+
         .arrow {
             right: 38px;
         }
     }
 
-    
+
 }
