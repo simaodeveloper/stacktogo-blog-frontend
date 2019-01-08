@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/',
+    base: 'http://stacktogo.surge.sh/',
     assets: './assets',
 
     title: 'StackToGo - Blog',
