@@ -19,7 +19,7 @@
     height: 4px;
     display: block;
     background: @color-2;
-    
+
     &:before,
     &:after {
         content: "";
@@ -69,4 +69,61 @@
             transform: translate(3px, 2px) rotate(-320deg);
         }
     }
+}
+
+.blur {
+    filter: blur(50px);
+}
+
+.network {
+    display: flex;
+    align-items: center;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .desktop & {
+
+        .network__link {
+            transition: transform .25s ease-out;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+
+.network__item {
+    margin: 0 25px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.network__link {
+    display: block;
+}
+
+.network__link--linkedin {
+    width: 20px;
+    height: 20px;
+}
+
+.network__link--facebook {
+    width: 11px;
+    height: 23px;
+}
+
+.network__link--twitter {
+    width: 20px;
+    height: 23px;
 }
