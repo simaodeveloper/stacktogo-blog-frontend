@@ -1,0 +1,209 @@
+& {
+
+    .fit-grid {
+        .fit-direction-column;
+        .fit-align-center;
+    }
+
+    .post__back {
+        .fit-w-8;
+        float: left;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5%;
+        color: @color-5;
+
+        @media (max-width: 767px) {
+            .fit-w-12;
+        }
+    }
+
+    .post__back__icon {
+        margin-right: 5px;
+        font-style: normal;
+        font-size: 18px;
+    }
+
+    .post__back__text {
+        font-size: 14px;
+    }
+
+    .post__header {
+        margin-bottom: 8%;
+    }
+
+    .post__title {
+        margin-bottom: 3%;
+        font-size: responsive 22px 45px;
+        line-height: 1.2em;
+        color: @color-2;
+    }
+
+    .post__subtitle {
+        margin-top: 3%;
+        margin-bottom: 2%;
+        font-size: responsive 18px 35px;
+        line-height: 1.2em;
+        color: @color-2;
+    }
+
+    .post__datetime {
+        font-size: responsive 12px 18px;
+        color: @color-5;
+    }
+
+    .post__text {
+        font-size: responsive 14px 20px;
+        line-height: 1.6em;
+        margin-bottom: 3%;
+
+        b {
+            font-family: @font-bold;
+        }
+
+        em {
+            font-family: @font-italic
+        }
+
+        a {
+            display: inline-block;
+            padding: 3px 8px;
+            border: 2px solid @color-2;
+            background: @color-2;
+            color: @color-1;
+            line-height: 1em;
+
+            transition: background .2s ease,
+                        color .2s ease;
+
+            .desktop &:hover {
+                background: @color-1;
+                color: @color-2;
+            }
+        }
+    }
+
+    .post__image {
+        display: block;
+        width: 100%;
+    }
+
+    .post__figure {
+        margin-bottom: 10%;
+    }
+
+    .post__figure__caption {
+        margin-top: 2%;
+        font-size: responsive 12px 16px;
+        text-align: center;
+        color: @color-6;
+    }
+
+    .post__quote {
+        position: relative;
+        margin: 5% 0 8%;
+        padding: 5% 0;
+        font-family: @font-bolditalic;
+        font-size: responsive 16px 30px;
+        color: @color-2;
+        text-align: center;
+        line-height: 1.8em;
+
+        .arrow {
+            height: 4px;
+
+            @media (max-width: 1024px) {
+                transform: translateX(-50%) scale(0.7);
+            }
+
+            @media (max-width: 1023px) {
+                transform: translateX(-50%) scale(0.5);
+            }
+        }
+    }
+
+    .post__quote--arrow-top {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .post__quote--arrow-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .post__quote__author {
+        margin-top: 1%;
+        font-family: @font-base;
+        text-transform: uppercase;
+        font-size: responsive 12px 17px;
+    }
+
+    .post__author {
+        border-top: 2px solid @color-7;
+        padding-top: 5%;
+        display: flex;
+
+        .arrow {
+            margin-top: 5%;
+
+            @media (max-width: 1024px) {
+                transform: scale(0.7);
+                transform-origin: bottom left;
+            }
+
+            @media (max-width: 1023px) {
+                transform: scale(0.5);
+            }
+        }
+    }
+
+    .author__avatar {
+        max-width: 110px;
+        max-height: 110px;
+
+        width: 100%;
+        height: 100%;
+
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    .author__image {
+        width: 100%;
+        display: block;
+        border-radius: 50%;
+    }
+
+    .author__content {
+        margin-left: 10%;
+    }
+
+    .author__name {
+        font-family: @font-featured-semibold;
+        font-size: responsive 18px 25px;
+    }
+
+    .author__description {
+        font-size: responsive 12px 18px;
+    }
+
+    .post__more {
+        margin-top: 20px;
+        font-family: @font-base;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+    }
+}

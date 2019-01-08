@@ -1,0 +1,17 @@
+<div class="fit-grid">
+
+    <a href="index.html" class="post__back">
+        <i class="post__back__icon">&lt;</i>
+        <span class="post__back__text">Back</span>
+    </a>
+
+    {% for piece in post %}
+        {% component 'post-'+piece.type, data=piece %}
+    {% endfor %}
+
+    {% component 'post-more' %}
+
+    {% component 'post-author', data=author %}
+
+    {% component 'post-comments' %}
+</div>
