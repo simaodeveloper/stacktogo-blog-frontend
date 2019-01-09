@@ -85,9 +85,9 @@
         {% component "header" %}
     {% endblock %}
 
-    {% block content %}
-        <main></main>
-    {% endblock %}
+    <main id="goToContent">
+        {% block content %}{% endblock %}
+    </main>
 
     {% block footer %}
         {% component "footer" %}
