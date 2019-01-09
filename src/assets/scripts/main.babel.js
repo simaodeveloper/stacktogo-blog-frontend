@@ -44,23 +44,14 @@ if(Is.desktop.SAFARI()) {
     $body.addClass('safari');
 }
 
-$document.on('preloaded.after', function () {
-    $window
-        .on('scroll', function () {
-            if (!Is.mobile.ANY()) {
-                Animator.onScroll();
-            }
-        })
-        .trigger('scroll');
-});
 
 $document.on('preloaded.before', function () {
     $window
-        .on('resize', function () {
-            wW = $window.outerWidth();
-            wH = $window.outerHeight();
-            dH = $document.outerHeight();
-        });
+    .on('resize', function () {
+        wW = $window.outerWidth();
+        wH = $window.outerHeight();
+        dH = $document.outerHeight();
+    });
 
     Component.init();
 
@@ -69,25 +60,36 @@ $document.on('preloaded.before', function () {
 
     // Add your code here
 
-    const $images = $('[data-big-image]');
-
-    $images.each((index, image) => {
-        const $image = $(image);
-        const bigImagePath = $image.attr('data-big-image');
-
-        const $bigImage = $('<img />');
-
-        $bigImage.on('load', () => {
-            $image.attr('src', $bigImage.attr('src'));
-            $image.removeClass('blur');
-        });
-
-        $bigImage.attr('src', bigImagePath);
-    });
-
     $window.trigger('resize');
 });
 
+$document.on('preloaded.after', function () {
+    $window
+        .on('scroll', function () {
+            if (!Is.mobile.ANY()) {
+                Animator.onScroll();
+            }
+        })
+        .trigger('scroll');
+
+    // your code here
+
+    const $images = $('[data-lazy-image]');
+
+    $images.each((index, image) => {
+        const $image = $(image);
+        const lazyImagePath = $image.attr('data-lazy-image');
+
+        const $lazyImage = $('<img />');
+
+        $lazyImage.on('load', () => {
+            $image.attr('src', $lazyImage.attr('src'));
+            $image.removeClass('blur');
+        });
+
+        $lazyImage.attr('src', lazyImagePath);
+    });
+});
 
 $body.waitForImages(true)
     .progress((loaded, count, success) => {

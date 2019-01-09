@@ -24,8 +24,8 @@ module.exports = {
         },
         {
             type: 'image',
-            image: './assets/images/content-370x280.jpg',
-            bigImage: './assets/images/content-1112x845.jpg',
+            image: './assets/images/content-1112x845-5qlt.jpg',
+            lazyImage: './assets/images/content-1112x845.jpg',
             alt: 'example of image description',
             caption: 'imagem retirada da internet'
         },
@@ -77,7 +77,7 @@ module.exports = {
     ],
     author: {
         image: './assets/images/avatar-110x110.jpg',
-        bigImage: './assets/images/avatar-330x330.jpg',
+        lazyImage: './assets/images/avatar-330x330.jpg',
         alt: 'person picture',
         name: 'Marcelo Rogers',
         description: 'VP Engineering at Expert360. Speaker and Producer of the forthcoming film: Debugging Diversity.'
